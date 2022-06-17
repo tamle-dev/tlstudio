@@ -31,6 +31,10 @@ gem 'bootsnap', '>= 1.4.4', require: false
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+  gem 'pry-rails', '~> 0.3.9'
+  gem 'dotenv-rails', '~> 2.7', '>= 2.7.6'
+  gem 'rspec-rails', '~> 5.1', '>= 5.1.2'
+  gem 'guard-rspec', '~> 4.7', '>= 4.7.3'
 end
 
 group :development do
@@ -50,7 +54,20 @@ group :test do
   gem 'selenium-webdriver'
   # Easy installation and use of web drivers to run system tests with browsers
   gem 'webdrivers'
+  gem 'timecop', '~> 0.9.5'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+
+gem 'pg', '~> 1.3', '>= 1.3.5'
+# Authentication
+gem 'jwt', '~> 2.4', '>= 2.4.1'
+gem 'devise', '~> 4.8', '>= 4.8.1'
+gem 'bcrypt', '~> 3.1', '>= 3.1.18'
+
+# View helpers
+gem 'slim-rails', '~> 3.5', '>= 3.5.1'
+gem 'simple_form', '~> 5.1'
+gem 'nested_form_fields', '~> 0.8.4'
+gem 'nested_form', '~> 0.3.2'
