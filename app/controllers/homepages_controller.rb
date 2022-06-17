@@ -1,6 +1,6 @@
 #
 class HomepagesController < ApplicationController
   def index
-    render 'homepages/index', layout: false
+    render 'homepages/index'
   end
 end

@@ -1,86 +1,47 @@
-doctype html
-html lang="en" 
-  head
-    meta content=("text/html; charset=UTF-8") http-equiv="Content-Type" /
-    meta charset="utf-8" /
-    meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport" /
-    title TLStudio
-    = stylesheet_link_tag 'application', media: 'all'
-    = javascript_include_tag 'application'
-  body
-    #video
-      .preloader
-        .preloader-bounce
-          span
-          span
-          span
-      header#header
-        .container-fluid
-          .navbar
-            a#logo href="#" title=("Elegance by TemplateMo") 
-              | TLSTUDIO
-            .navigation-row
-              nav#navigation
-                button.navbar-toggle type="button" 
-                  i.fa.fa-bars
-                .nav-box.navbar-collapse
-                  ul#nav.navigation-menu.nav.navbar-nav.navbars
-                    li
-                      a href="#" Log In
-      #fullpage.fullpage-default
-        .section.animated-row
-          .section-inner
-            .welcome-box
-              span.welcome-first.animate data-animate="fadeInUp" Hello, welcome to
-              h1.welcome-title.animate data-animate="fadeInUp" TLStudio
-              / p.animate data-animate="fadeInUp" Sharing videos platform
-              .scroll-down.next-section.animate class="data-animate=" fadeinup="" 
-                img alt="" src="mouse-scroll.png" /
-                span Scroll Down
-        .section.animated-row
-          .section-inner
-            .about-section
-              .row.justify-content-center
-                .col-lg-8.wide-col-laptop
-                  .row
-                    .col-md-6
-                      .about-contentbox
-                        .animate data-animate="fadeInUp" 
-                          span Duy Thanh Nguyen
-                          h2
-                            | Tư Duy Sai Lầm Của Người Việt Về IELTS | Từ vụ IELTS Tuấn Quỳnh,
-                            | Kiên Trần...
-                          p
-                            | Để mà nói về IELTS thì mình bực mình rất lâu rồi, cơ mà dạo gần đây
-                            | có vài drama hơi lớn của một số thầy cô giáo tự sửa điểm thi của
-                            | mình lên để mở lớp dạy học, bán sách...Nên mình phải làm 1 video như
-                            | thế này, mong rằng nhiều bạn trẻ và cả các bậc phụ huynh cũng có thể
-                            | xem và hiểu được thực sự IELTS là gì, có cần thiết phải thi không và
-                            | điểm IELTS càng cao càng tốt có phải là lối suy nghĩ đúng đắn hay
-                            | không?
-                        /!
-                          | <div class="facts-list owl-carousel"
-                          | <div class="item animate" data-animate="fadeInUp"
-                          | <div class="counter-box"
-                          | <i class="fa fa-eye counter-icon" aria-hidden="true"></i><span
-                          | class="count-number">32</span
-                          | Views
-                          | </div
-                          | </div
-                          | <div class="item animate" data-animate="fadeInUp"
-                          | <div class="counter-box"
-                          | <i class="fa fa-thumbs-up counter-icon"
-                          | aria-hidden="true"></i><span class="count-number">4</span
-                          | Likes
-                          | </div
-                          | </div
-                          | <div class="item animate" data-animate="fadeInUp"
-                          | <div class="counter-box"
-                          | <i class="fa fa-comment counter-icon"
-                          | aria-hidden="true"></i><span class="count-number">12</span
-                          | Comments
-                          | </div
-                          | </div
-                          | </div
-                    .col-md-6
-                      iframe.iframe-embed allow=("accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture") allowfullscreen="" frameborder="0" height="510" src="https://www.youtube.com/embed/Bd6tKrxhxz4" title=("YouTube video player") width="470" 
+.section.animated-row
+  .section-inner
+    .about-section
+      .row.justify-content-center
+        .col-lg-8.wide-col-laptop
+          .row
+            .col-md-6
+              .about-contentbox
+                .animate data-animate="fadeInUp" 
+                  span Duy Thanh Nguyen
+                  h2
+                    | Tư Duy Sai Lầm Của Người Việt Về IELTS | Từ vụ IELTS Tuấn Quỳnh,
+                    | Kiên Trần...
+                  p
+                    | Để mà nói về IELTS thì mình bực mình rất lâu rồi, cơ mà dạo gần đây
+                    | có vài drama hơi lớn của một số thầy cô giáo tự sửa điểm thi của
+                    | mình lên để mở lớp dạy học, bán sách...Nên mình phải làm 1 video như
+                    | thế này, mong rằng nhiều bạn trẻ và cả các bậc phụ huynh cũng có thể
+                    | xem và hiểu được thực sự IELTS là gì, có cần thiết phải thi không và
+                    | điểm IELTS càng cao càng tốt có phải là lối suy nghĩ đúng đắn hay
+                    | không?
+                /!
+                  | <div class="facts-list owl-carousel"
+                  | <div class="item animate" data-animate="fadeInUp"
+                  | <div class="counter-box"
+                  | <i class="fa fa-eye counter-icon" aria-hidden="true"></i><span
+                  | class="count-number">32</span
+                  | Views
+                  | </div
+                  | </div
+                  | <div class="item animate" data-animate="fadeInUp"
+                  | <div class="counter-box"
+                  | <i class="fa fa-thumbs-up counter-icon"
+                  | aria-hidden="true"></i><span class="count-number">4</span
+                  | Likes
+                  | </div
+                  | </div
+                  | <div class="item animate" data-animate="fadeInUp"
+                  | <div class="counter-box"
+                  | <i class="fa fa-comment counter-icon"
+                  | aria-hidden="true"></i><span class="count-number">12</span
+                  | Comments
+                  | </div
+                  | </div
+                  | </div
+            .col-md-6
+              iframe.iframe-embed allow=("accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture") allowfullscreen="" frameborder="0" height="510" src="https://www.youtube.com/embed/Bd6tKrxhxz4" title=("YouTube video player") width="470" 
