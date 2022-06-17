@@ -23,14 +23,9 @@
  *= require_self
  */
 
-/*@import url('https://fonts.googleapis.com/css?family=Kanit:100,200,300,400,500,600,700,800,900');*/
+/*@import url('https://fonts.googleapis.com/css?family=Raleway:100,300,400,500,700,900');*/
 
 iframe.iframe-embed {
   border-radius: 0.75rem !important;
   box-shadow: rgb(0 0 0) 0px 5px 15px;
-}
-
-strong-word {
-  font-style: normal;
-  font-weight: 200;
 }
