@@ -8,8 +8,13 @@ Rails.application.routes.draw do
     resources :movies
   end
 
-  scope '/api', module: 'api', as: :api do
+  scope '/api', module: 'api' do
     post 'users/login', to: 'login#call'
+    get :movies, to: 'get_movies#call'
+
+    scope 'me', module: 'me' do
+      post 'movies/share', to: 'share_movie#call'
+    end
   end
 
   root 'movies#index'
