@@ -25,10 +25,14 @@ class ApplicationController < ActionController::Base
   end
 
   def per_page
-    params[:per_page] || 10
+    params[:per_page] || 5
   end
 
   def paging(collection)
     collection.page(page).per(per_page)
+  end
+
+  def current_user_id
+    current_user&.id
   end
 end

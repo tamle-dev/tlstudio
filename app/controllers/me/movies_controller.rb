@@ -1,6 +1,10 @@
 #
 module Me
   class MoviesController < AuthController
+    def index
+      @collection = paging ::Movie.where(id: ::UserMovie.select('movie_id').where(user_id: current_user_id)).order(id: :desc)
+    end
+
     def create
       form = MovieForm.new(permitted_params)
       unless form.valid?

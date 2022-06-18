@@ -2,7 +2,7 @@
 = yield(:preload)
 #fullpage.fullpage-default
   = render "shared/welcome"
-  - @collection.each do |movie|
+  - @collection.each_with_index do |movie, index|
     .section.animated-row
       .section-inner
         .about-section
@@ -39,6 +39,6 @@
                           | Comments
                 .col-md-6
                   iframe.iframe-embed allow=("accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture") allowfullscreen="" frameborder="0" height="510" src="https://www.youtube.com/embed/#{movie.external_code}?mute=1&autoplay=1" title=("YouTube video player") width="470" 
-        - if movie.equal?(@collection.last)
+        - if index == @collection.length - 1
           .scroll-down.next-section.animate class="data-animate=" fadeinup="" 
             = render "shared/paging", collection: @collection

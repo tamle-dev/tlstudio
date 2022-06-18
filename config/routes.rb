@@ -4,7 +4,7 @@ Rails.application.routes.draw do
     get '/users/sign_out' => 'devise/sessions#destroy'
   end
 
-  scope '/me', module: 'me' do
+  scope '/me', module: 'me', as: :me do
     resources :movies
   end
 

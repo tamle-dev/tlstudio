@@ -16,7 +16,7 @@
                       strong
                         | Oh snap! &nbsp;
                       = alert
-                = simple_form_for(::Movie.new, as: :resource, url: movies_path) do |f|
+                = simple_form_for(::Movie.new, as: :resource, url: me_movies_path) do |f|
                   = f.input_field :url, class: 'form-control', placeholder: "URL"
                   .row
                     .col-md-6

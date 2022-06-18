@@ -74,7 +74,7 @@ module MovieService
     def create_user_movie(movie)
       user_movie = ::UserMovie.new(user_id: user.id, movie_id: movie.id)
 
-      user_movie.save if user_movie.persisted?
+      user_movie.save unless user_movie.persisted?
     end
   end
 end
