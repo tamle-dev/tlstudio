@@ -55,6 +55,7 @@ group :test do
   gem 'selenium-webdriver'
   # Easy installation and use of web drivers to run system tests with browsers
   gem 'webdrivers'
+  gem 'webmock', '~> 3.14'
   gem 'timecop', '~> 0.9.5'
 end
 

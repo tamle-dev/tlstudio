@@ -2,7 +2,7 @@
 module Me
   class MoviesController < AuthController
     def index
-      @collection = paging ::Movie.where(id: ::UserMovie.select('movie_id').where(user_id: current_user_id)).order(id: :desc)
+      @collection = paging scoped
     end
 
     def create
@@ -25,6 +25,14 @@ module Me
 
     def permitted_params
       params.require(:resource).permit(:user_id, :url)
+    end
+
+    def fetch_movie_ids
+      UserMovie.select('movie_id').where(user_id: current_user_id)
+    end
+
+    def scoped
+      Movie.where(id: fetch_movie_ids).order(id: :desc)
     end
   end
 end
