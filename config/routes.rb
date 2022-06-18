@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   end
 
   scope '/me', module: 'me' do
-    post :movies, to: 'movies#create'
+    resources :movies
   end
 
   root 'movies#index'

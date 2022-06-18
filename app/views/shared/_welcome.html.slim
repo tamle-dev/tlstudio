@@ -5,6 +5,8 @@
         span.welcome-first.animate data-animate="fadeInUp" Good morning
         h1.welcome-title.animate data-animate="fadeInUp"
           = "#{current_user.username}"
+        = link_to "Share a movie", new_movie_path, class: "a-no-underline btn-custom", type: "button"
+        | &nbsp;
         = link_to "Sign out", destroy_user_session_path, method: :delete, class: "a-no-underline btn-custom", type: "button"
       - else
         span.welcome-first.animate data-animate="fadeInUp" Welcome to

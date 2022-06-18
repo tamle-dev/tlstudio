@@ -1,0 +1,26 @@
+#fullpage.fullpage-default
+  .section.animated-row
+    .section-inner
+      .row.justify-content-center
+        .col-md-7.wide-col-laptop
+          .title-block.animate data-animate="fadeInUp" 
+            span Let's share your movie
+            / h2 TLSTUDIO!
+          .contact-section
+            .row
+              .col-md-3
+              .col-md-6.animate data-animate="fadeInUp" 
+                - if flash[:alert].present?
+                  - flash[:alert].each do |alert|
+                    .alert.alert-danger.alert-dismissible.fade.show[role="alert"]
+                      strong
+                        | Oh snap! &nbsp;
+                      = alert
+                = simple_form_for(::Movie.new, as: :resource, url: movies_path) do |f|
+                  = f.input_field :url, class: 'form-control', placeholder: "URL"
+                  .row
+                    .col-md-6
+                      = f.button :submit, 'Share', class: 'btn', style: 'width: 110%;'
+                    .col-md-6
+                      = link_to 'Back', root_path, class: 'a-no-underline btn-custom', type: 'button', style: 'width: 100%;'
+              .col-md-3
