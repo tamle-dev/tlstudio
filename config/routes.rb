@@ -8,5 +8,9 @@ Rails.application.routes.draw do
     resources :movies
   end
 
+  scope '/api', module: 'api', as: :api do
+    post 'users/login', to: 'login#call'
+  end
+
   root 'movies#index'
 end

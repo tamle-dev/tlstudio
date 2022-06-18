@@ -35,6 +35,7 @@ group :development, :test do
   gem 'dotenv-rails', '~> 2.7', '>= 2.7.6'
   gem 'rspec-rails', '~> 5.1', '>= 5.1.2'
   gem 'guard-rspec', '~> 4.7', '>= 4.7.3'
+  gem 'awesome_print', '~> 2.0.0.pre2'
 end
 
 group :development do
@@ -61,6 +62,10 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem 'pg', '~> 1.3', '>= 1.3.5'
+
+# Parse json
+gem 'oj', '~> 3.13', '>= 3.13.14'
+
 # Authentication
 gem 'jwt', '~> 2.4', '>= 2.4.1'
 gem 'devise', '~> 4.8', '>= 4.8.1'
