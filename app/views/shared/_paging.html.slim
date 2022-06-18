@@ -1,0 +1,6 @@
+.welcome-box
+  - if collection.prev_page
+    = link_to "Previous", root_path(page: collection.prev_page), class: "a-no-underline btn-custom", type: "button"
+  | &nbsp;
+  - if collection.next_page
+    = link_to "Next", root_path(page: collection.next_page), class: "a-no-underline btn-custom", type: "button"

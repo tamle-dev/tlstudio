@@ -1,7 +1,7 @@
 require 'api_client'
 
 # YoutubeClient.new.get_code(url)
-# YoutubeClient.new.get_video_info(url)
+# YoutubeClient.new.get_video_info(code)
 class YoutubeClient < ApiClient
   attr_reader :api_key
 
@@ -15,9 +15,8 @@ class YoutubeClient < ApiClient
     @api_key = ENV['YOUTUBE_API_KEY']
   end
 
-  def get_video_info(url)
-    code = get_code(url)
-    resp = get_json "/v3/videos?id=#{code}&key=#{api_key}&part=snippet,statistics", idToken: id_token
+  def get_video_info(code)
+    resp = get_json "/v3/videos?id=#{code}&key=#{api_key}&part=snippet,statistics"
     JSON.parse resp.body
   end
 

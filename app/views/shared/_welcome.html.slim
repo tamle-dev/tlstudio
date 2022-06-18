@@ -7,12 +7,11 @@
           = "#{current_user.username}"
         = link_to "Share a movie", new_movie_path, class: "a-no-underline btn-custom", type: "button"
         | &nbsp;
-        = link_to "Sign out", destroy_user_session_path, method: :delete, class: "a-no-underline btn-custom", type: "button"
+        = link_to "Log out", destroy_user_session_path, method: :delete, class: "a-no-underline btn-custom", type: "button"
       - else
         span.welcome-first.animate data-animate="fadeInUp" Welcome to
         h1.welcome-title.animate data-animate="fadeInUp" TLStudio
         = link_to "Get started", new_user_registration_path, class: "a-no-underline btn-custom", type: "button"
-      / p.animate data-animate="fadeInUp" Sharing videos platform
       .scroll-down.next-section.animate class="data-animate=" fadeinup="" 
         img alt="" src="mouse-scroll.png" /
         span Scroll Down

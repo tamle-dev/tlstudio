@@ -19,4 +19,16 @@ class ApplicationController < ActionController::Base
   def after_sign_out_path_for(resource_or_scope)
     root_path
   end
+
+  def page
+    params[:page] || 1
+  end
+
+  def per_page
+    params[:per_page] || 10
+  end
+
+  def paging(collection)
+    collection.page(page).per(per_page)
+  end
 end

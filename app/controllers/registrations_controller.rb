@@ -6,6 +6,7 @@ class RegistrationsController < Devise::RegistrationsController
       return redirect_to new_user_registration_path
     else
       build_resource(sign_up_params)
+      resource.id = IdentifierService.new.generate(::User, 0)
       resource.save
 
       unless resource.valid?
