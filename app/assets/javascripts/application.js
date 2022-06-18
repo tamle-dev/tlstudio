@@ -18,7 +18,4 @@
 //= require js/jquery.inview.min
 //= require js/form
 //= require js/custom
-//= require rails-ujs
-//= require activestorage
-//= require turbolinks
 //= require_tree .

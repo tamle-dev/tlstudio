@@ -1,8 +1,15 @@
 .section.animated-row
   .section-inner
     .welcome-box
-      span.welcome-first.animate data-animate="fadeInUp" Hello, welcome to
-      h1.welcome-title.animate data-animate="fadeInUp" TLStudio
+      - if current_user
+        span.welcome-first.animate data-animate="fadeInUp" Good morning
+        h1.welcome-title.animate data-animate="fadeInUp"
+          = "#{current_user.username}"
+        = link_to "Sign out", destroy_user_session_path, method: :delete, class: "a-no-underline btn-custom", type: "button"
+      - else
+        span.welcome-first.animate data-animate="fadeInUp" Welcome to
+        h1.welcome-title.animate data-animate="fadeInUp" TLStudio
+        = link_to "Get started", new_user_registration_path, class: "a-no-underline btn-custom", type: "button"
       / p.animate data-animate="fadeInUp" Sharing videos platform
       .scroll-down.next-section.animate class="data-animate=" fadeinup="" 
         img alt="" src="mouse-scroll.png" /

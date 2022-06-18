@@ -29,3 +29,33 @@ iframe.iframe-embed {
   border-radius: 0.75rem !important;
   box-shadow: rgb(0 0 0) 0px 5px 15px;
 }
+
+.btn-custom {
+  background: none;
+  color: #fff;
+  text-align: center;
+  line-height: 52px;
+  padding: 0 35px;
+  border-radius: 0px;
+  text-transform: uppercase;
+  font-weight: 600;
+  border: 2px solid transparent;
+  border-radius: 10px;
+  border-color: #fff;
+}
+
+.btn-custom:hover,
+.btn-custom:focus {
+  color: #222;
+  background: #fff;
+}
+
+.btn-custom:focus {
+  box-shadow: none;
+  outline: none;
+  transition: all 0.4s ease;
+}
+
+.a-no-underline:hover {
+  text-decoration: none;
+}

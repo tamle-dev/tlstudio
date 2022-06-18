@@ -1,13 +1,17 @@
 class RegistrationsController < Devise::RegistrationsController
   def create
-    build_resource(sign_up_params)
+    flash[:alert] = []
+    if username_exists?
+      flash[:alert] << 'Username already exists'
+      return redirect_to new_user_registration_path
+    else
+      build_resource(sign_up_params)
+      resource.save
 
-    resource.save
-
-    unless resource.valid?
-      flash[:alert] = []
-      resource.errors.full_messages.each do |message|
-        flash[:alert] << message
+      unless resource.valid?
+        resource.errors.full_messages.each do |message|
+          flash[:alert] << message
+        end
       end
     end
 
@@ -26,5 +30,17 @@ class RegistrationsController < Devise::RegistrationsController
       set_minimum_password_length
       respond_with resource
     end
+  end
+
+  private
+
+  def username_exists?
+    User.exists?(username: username)
+  end
+
+  def username
+    return unless params[:user]
+
+    params[:user][:username]
   end
 end

@@ -3,16 +3,6 @@ html lang="en"
   = render "shared/header"
   body
     #video
-      .preloader
-        .preloader-bounce
-          span
-          span
-          span
-      header#header
-        .container-fluid
-          = render "shared/nav"
-      #fullpage.fullpage-default
-        = render "shared/welcome"
-        = yield
+      = yield
     javascript:
     = javascript_include_tag 'application'
