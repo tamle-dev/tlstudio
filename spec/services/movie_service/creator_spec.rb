@@ -3,7 +3,7 @@ require 'rails_helper'
 describe MovieService::Creator do
   include_context 'youtube_stub', code: 'TSzcs3Ej90c'
 
-  let(:user) { User.create }
+  let(:user) { User.create username: 'tamle1', password: '123456' }
   let(:params) do
     {
       url: 'https://www.youtube.com/watch?v=TSzcs3Ej90c&ab_channel=DuyThanhNguyen'
@@ -29,6 +29,20 @@ describe MovieService::Creator do
 
     it 'increases Movie count' do
       expect{subject.exec}.to change{Movie.count}.by(1)
+    end
+
+    it 'increases UserMovie count' do
+      expect{subject.exec}.to change{UserMovie.count}.by(1)
+    end
+
+    context 'when movie already exists' do
+      before do
+        Movie.create external_code: 'TSzcs3Ej90c'
+      end
+
+      it 'do not increase Movie count' do
+        expect{subject.exec}.to change{Movie.count}.by(0)
+      end
     end
   end
 end
