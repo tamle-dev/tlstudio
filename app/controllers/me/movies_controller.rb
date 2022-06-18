@@ -2,17 +2,15 @@
 module Me
   class MoviesController < AuthController
     def create
-      ap params
+      binding.pry
+      return
       redirect_to root_path
-    end
-
-    def new
     end
 
     private
 
     def permitted_params
-      params.permit(:url)
+      params.require(:resource).permit(:url)
     end
   end
 end
