@@ -7,6 +7,7 @@ RUN apk update && \
     apk add npm && \
     rm -rf /var/cache/apk/*
 
+RUN gem install bundler
 RUN npm install --global yarn
 
 RUN mkdir /app
