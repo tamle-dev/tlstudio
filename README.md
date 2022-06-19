@@ -65,6 +65,7 @@ GET api/movies
 POST api/me/movies/share
 ```
 > All of APIs that requires authenticate must have Authorization header with auth_token which has been generated in login API
+
 > https://documenter.getpostman.com/view/17493034/UzBmMSSi
 # How to use
 1. Access http://localhost:3000
