@@ -52,7 +52,6 @@ rails c
 ```
 9. Access http://localhost:3000
 # API
-Note: All API (except login API) must have Authorization header with auth_token which has been generated in login API
 1. Login with username & password
 ```sh
 POST api/users/login
@@ -65,6 +64,7 @@ GET api/movies
 ```sh
 POST api/me/movies/share
 ```
+> All of APIs that requires authenticate must have Authorization header with auth_token which has been generated in login API
 > https://documenter.getpostman.com/view/17493034/UzBmMSSi
 # How to use
 1. Access http://localhost:3000
