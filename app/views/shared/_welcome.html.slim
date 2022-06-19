@@ -2,7 +2,8 @@
   .section-inner
     .welcome-box
       - if current_user
-        span.welcome-first.animate data-animate="fadeInUp" Good morning
+        span.welcome-first.animate data-animate="fadeInUp"
+          = greeting
         h1.welcome-title.animate data-animate="fadeInUp"
           = "#{current_user.username}"
         = link_to "Your movies", me_movies_path, class: "a-no-underline btn-custom", type: "button"

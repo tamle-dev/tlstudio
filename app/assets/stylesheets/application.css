@@ -79,3 +79,14 @@ iframe.iframe-embed {
   line-clamp: 3;
   -webkit-box-orient: vertical;
 }
+
+body {
+  background-image: url('background.jpeg');
+  /* Full height */
+  height: 100%;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}

@@ -18,4 +18,6 @@ Rails.application.routes.draw do
   end
 
   root 'movies#index'
+
+  get :version, to: 'api/application#version'
 end
