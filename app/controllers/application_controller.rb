@@ -1,8 +1,6 @@
 require 'application_responder'
 
 class ApplicationController < ActionController::Base
-  skip_before_action :verify_authenticity_token, if: -> { controller_name == 'sessions' }
-
   self.responder = ApplicationResponder
 
   layout 'application'
