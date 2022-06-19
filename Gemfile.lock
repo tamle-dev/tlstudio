@@ -283,7 +283,6 @@ GEM
       actionpack (>= 5.2)
       activesupport (>= 5.2)
       sprockets (>= 3.0.0)
-    sqlite3 (1.4.4)
     temple (0.8.2)
     thor (1.2.1)
     tilt (2.0.10)
@@ -351,7 +350,6 @@ DEPENDENCIES
   simple_form (~> 5.1)
   slim-rails (~> 3.5, >= 3.5.1)
   spring
-  sqlite3 (~> 1.4)
   timecop (~> 0.9.5)
   turbolinks (~> 5)
   tzinfo-data
