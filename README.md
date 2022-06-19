@@ -76,7 +76,6 @@ POST api/me/movies/share
 ![title](screenshots/welcome.png)
 ![title](screenshots/login.png)
 ![title](screenshots/sign-up.png)
-![title](screenshots/dashboard.png)
 ![title](screenshots/logged-in.png)
 ![title](screenshots/how-many-video-that-you-shared.png)
 ![title](screenshots/share-a-video.png)
