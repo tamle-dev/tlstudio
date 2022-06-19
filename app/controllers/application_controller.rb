@@ -35,4 +35,9 @@ class ApplicationController < ActionController::Base
   def current_user_id
     current_user&.id
   end
+
+  def verify_authenticity_token
+    request.headers['X-CSRF-Token'] ||= request.headers['X-XSRF-TOKEN']
+    super
+  end
 end
