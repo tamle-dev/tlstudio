@@ -1,21 +1,21 @@
 # Overview
-This web application will shorten your URL.
-![title](screenshots/landing-page.png)
+This is a video sharing platform.
+![title](screenshots/video-feed.png)
 # System Dependencies
 - Ruby 3.0.2
-- Rails 6.1.4
+- Rails 6.1.6
 - PostgreSQL
 # Setup & Configuration
 ## Docker
 1. Clone project
 ```sh
-git clone git@github.com:tamle-dev/shorten-url.git
+git clone https://github.com/tamle-dev/tlstudio.git
 ```
 2. Duplicate .env from .env.example
 3. Make sure `DB_USER` and `DB_PASSWORD` in docker-compose.yml and .env are the same
 4. Build image
 ```sh
-docker build . -t tamle:lastest
+docker build . -t tlstudio:latest
 ```
 5. Compose container
 ```sh
@@ -30,7 +30,7 @@ brew install postgresql
 2. Install Ruby 3.0.2 (recommend use rvm)
 3. Clone project
 ```sh
-git clone git@github.com:tamle-dev/shorten-url.git
+git clone https://github.com/tamle-dev/tlstudio.git
 ```
 4. Duplicate .env from .env.example
 5. Install dependencies
@@ -53,38 +53,34 @@ rails c
 9. Access http://localhost:3000
 # API
 Note: All API (except login API) must have Authorization header with auth_token which has been generated in login API
-1. Login with email & password
+1. Login with username & password
 ```sh
 POST api/users/login
 ```
-2. Shorten URL
+2. Get movies
 ```sh
-POST api/links/shorten
+GET api/movies
 ```
-3. Get links
+3. Share a video
 ```sh
-GET api/links
+POST api/me/movies/share
 ```
-4. Get link details
-```sh
-GET api/links/:slug
-```
+> https://documenter.getpostman.com/view/17493034/UzBmMSSi
 # How to use
 1. Access http://localhost:3000
 2. Sign in / Sign up
-3. Create link with long URL
-4. View list of links
-5. View link details with shortend url
+3. Share a video with youtube link
+4. View list of videos
 # UI
-![title](screenshots/landing-page.png)
-![title](screenshots/sign-in.png)
+![title](screenshots/welcome.png)
+![title](screenshots/login.png)
 ![title](screenshots/sign-up.png)
 ![title](screenshots/dashboard.png)
-![title](screenshots/create-link.png)
-![title](screenshots/links.png)
-![title](screenshots/link.png)
+![title](screenshots/logged-in.png)
+![title](screenshots/how-many-video-that-you-shared.png)
+![title](screenshots/share-a-video.png)
+![title](screenshots/video-feed.png)
 # API
 ![title](screenshots/api-login.png)
-![title](screenshots/api-shorten.png)
-![title](screenshots/api-get-links.png)
-![title](screenshots/api-get-link.png)
+![title](screenshots/api-get-movies.png)
+![title](screenshots/api-share-video.png)

@@ -9,7 +9,7 @@ Rails.application.routes.draw do
   end
 
   scope '/api', module: 'api' do
-    post 'users/login', to: 'login#call'
+    post :login, to: 'login#call'
     get :movies, to: 'get_movies#call'
 
     scope 'me', module: 'me' do

@@ -1,0 +1,14 @@
+en:
+  api:
+    errors:
+      expired_auth_token: Auth token has expired
+      missing_auth_token: Auth token is missing
+      invalid_auth_token: Auth token is invalid.
+      resource_not_found: The specified resource does not exist
+      resource_already_exists: The specified resource already exist
+      missing_param: "%{attr} is missing"
+      invalid_access_token: Invalid access token
+      server_is_maintenance: The system is under maintenance, please visit again few hours later.
+      forbidden: You don't have permission to access
+      invalid_token: Invalid Token
+      expired_token: Expired Token

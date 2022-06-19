@@ -38,7 +38,8 @@
                             = number_to_human(movie.external_comment, format: '%n%u', precision: 2, units: { thousand: 'K', million: 'M', billion: 'B' })
                           | Comments
                 .col-md-6
-                  iframe.iframe-embed allow=("accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture") allowfullscreen="" frameborder="0" height="510" src="https://www.youtube.com/embed/#{movie.external_code}?mute=1&autoplay=1" title=("YouTube video player") width="470" 
+                  / TODO options ?mute=1&autoplay=1
+                  iframe.iframe-embed allow=("accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture") allowfullscreen="" frameborder="0" height="510" src="https://www.youtube.com/embed/#{movie.external_code}" title=("YouTube video player") width="470" 
         - if index == @collection.length - 1
           .scroll-down.next-section.animate class="data-animate=" fadeinup="" 
             = render "shared/paging", collection: @collection
